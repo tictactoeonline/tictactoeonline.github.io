@@ -358,7 +358,7 @@ td {
   }
 }
 
-@media (max-height: 750px) {
+@media (max-height: 750px) and (min-width: 1000px) {
   h1#turn {
     top: 260px;
   }
