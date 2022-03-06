@@ -10,6 +10,7 @@ var shiftKey = false;
 
 var chatBan = false;
 var chatBanTime = 5;
+var chatBanTimeLeft = 5;
 var tempMessageCount = 0;
 var tempMessageLimit = 8;
 
@@ -81,6 +82,22 @@ function lose(box1, box2, box3) {
   setTimeout(() => {
     reset();
   }, 3000);
+}
+
+function disableChat() {
+  warning("Chat disabled for " + chatBanTime + "s.");
+  chatBan = true;
+  setTimeout(() => {
+    chatBan = false;
+    tempMessageCount = 0;
+  }, chatBanTime * 1000);
+  chatBanTime *= 2;
+}
+
+function chatBan() {
+  if (tempMessageCount > tempMessageLimit && chatBan == false) {
+    disableChat();
+  }
 }
 
 setInterval(() => {
@@ -232,9 +249,14 @@ setInterval(() => {
 function sendMessage() {
   if (!$("#message").val().trim() || chatBan) return;
   $("#messenger").append(
-    $("<div class='message sent'>").text($("#message").val().trim())
+    $("<div class='message sent'>").html(
+      $("#message").val().replaceAll("[¶]", "<br>").trim()
+    )
   );
-  conn.send({ type: "message", data: $("#message").val().trim() });
+  conn.send({
+    type: "message",
+    data: $("#message").val().replaceAll("[¶]", "<br>").trim(),
+  });
   $("#message").val("");
   document
     .getElementById("messenger")
@@ -252,6 +274,12 @@ function warning(str) {
 function onKeyDown(e) {
   if (e.key == "Shift") shiftKey = true;
   if (e.key == "Enter" && !shiftKey) sendMessage();
+  if (e.key == "Enter" && shiftKey) {
+    $("#message").val($("#message").val() + " [¶] ");
+    document
+      .getElementById("message")
+      .scrollBy({ left: 100, behavior: "smooth" });
+  }
   if (e.key == "t")
     setTimeout(() => {
       $("#message").focus();
