@@ -194,3 +194,175 @@ td {
 #game {
   display: none;
 }
+
+@media (max-width: 1070px) {
+  h1 {
+    font-size: 25px;
+  }
+  input#remoteID {
+    font-size: 22px;
+    width: 500px;
+  }
+  p#peerID {
+    position: absolute;
+    text-align: left;
+    left: 75px;
+    top: 10px;
+    font-size: 17px;
+  }
+  button {
+    font-size: 18px;
+    padding: 8px;
+  }
+  table {
+    top: 600px;
+  }
+  h1#header {
+    top: 165px;
+    font-size: 80px;
+  }
+  h1#subheader {
+    font-size: 30px;
+  }
+  #messenger {
+    width: 220px;
+  }
+  #message {
+    width: 205px;
+  }
+}
+
+@media (max-width: 750px) {
+  p#peerID {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+    font-family: "Poppins";
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  h1#turn {
+    top: 490px;
+    font-size: 25px;
+  }
+  table {
+    top: 55%;
+  }
+  td {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+  #messenger {
+    left: 50%;
+    transform: translate(-50%);
+    top: 40px;
+    border-radius: 30px 30px 0 0;
+    border: 1px solid white;
+    border-bottom: none;
+    width: 400px;
+  }
+  #message {
+    left: 50%;
+    transform: translate(-50%);
+    top: 405px;
+    border-radius: 0 0 30px 30px;
+    border: 1px solid white;
+    width: 385px;
+  }
+}
+
+@media (max-width: 550px) {
+  p#peerID {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+    font-family: "Poppins";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h1#turn {
+    top: 370px;
+    font-size: 18px;
+  }
+  h1#header {
+    font-size: 50px;
+    top: 200px;
+  }
+  h1#subheader {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  input#remoteID {
+    width: 350px;
+    font-size: 15px;
+  }
+  button {
+    font-size: 14px;
+    padding: 7px;
+  }
+  table {
+    top: 500px;
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #messenger {
+    left: 50%;
+    transform: translate(-50%);
+    top: 60px;
+    border-radius: 30px 30px 0 0;
+    border: 2px solid white;
+    border-bottom: none;
+    width: 200px;
+    height: 200px;
+  }
+  #message {
+    left: 50%;
+    transform: translate(-50%);
+    top: 275px;
+    border-radius: 0 0 30px 30px;
+    border: 2px solid white;
+    width: 184px;
+    font-size: 15px;
+  }
+  .sent {
+    font-size: 15px;
+    padding: 0 5px 0 5px;
+  }
+  .recieved {
+    font-size: 15px;
+    padding: 0 5px 0 5px;
+  }
+  #disconnect {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 1200px) and (min-width: 1000px) {
+  h1#turn {
+    top: 350px;
+  }
+  table {
+    top: 560px;
+  }
+}
+
+@media (max-height: 750px) {
+  h1#turn {
+    top: 260px;
+  }
+  table {
+    top: 460px;
+  }
+}
