@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  top: 39vh;
+  font-family: "Poppins";
+  color: white;
+  font-size: 40px;
+}
+
+h1#header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 140px;
+  font-size: 110px;
+  width: fit-content;
+}
+
+h1#subheader {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 260px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+input {
+  position: relative;
+  top: 39vh;
+  background: transparent;
+  border: 2px solid white;
+  font-family: "Poppins";
+  color: white;
+  font-size: 30px;
+  width: 680px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+button {
+  position: relative;
+  top: 40vh;
+  font-family: "Poppins";
+  padding: 10px;
+  font-size: 25px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+p#peerID {
+  font-family: "Poppins";
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+table {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Poppins";
+  font-size: 60px;
+  font-weight: 700;
+  user-select: none;
+}
+td {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+#disconnect {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgb(255, 120, 120);
+  color: white;
+  border: 3px solid white;
+  font-family: "Poppins";
+  font-weight: 600;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#turn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 34vh;
+  font-size: 25px;
+}
+
+#messenger {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  right: 0;
+  width: 285px;
+  height: 350px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid white;
+}
+
+#messenger::-webkit-scrollbar {
+  width: 8px;
+}
+
+#messenger::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+#messenger::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#message {
+  position: absolute;
+  right: 0;
+  border-radius: 0 0 0 30px;
+  text-align: left;
+  border: none;
+  border: 1px solid white;
+  background: transparent;
+  border-right: none;
+  width: 270px;
+  height: 33px;
+  top: 365px;
+  font-size: 18px;
+  padding-left: 30px;
+  font-family: "Poppins";
+  color: white;
+  resize: none;
+}
+
+.message {
+  margin: 10px 10px -5px 10px;
+  width: fit-content;
+  max-width: 280px;
+  min-height: 27px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 2px 5px 3px 5px;
+  font-family: "Poppins";
+}
+
+.sent {
+  color: white;
+  background: dodgerblue;
+}
+
+.received {
+  color: white;
+  background: rgb(60, 60, 60);
+}
+
+.warning {
+  color: rgb(150, 0, 0);
+}
+
+#connect {
+  display: block;
+}
+
+#game {
+  display: none;
+}
